@@ -1,9 +1,8 @@
 # Module V: Econometric Calculation
 
-**Status:** Scaffold prepared for scientific review
-**Prepared for review by:** Wladimir J. Alonso
-**Pending review:** Wladimir J. Alonso
-**Additional review:** To be scheduled
+**Status:** Scaffold for scientific review
+**Review status:** Pending formal WFI scientific review
+**Review record:** Tracked through the WFI canon review workflow
 
 > **Terminology note:** The current working term for this module is
 > **"Econometric Calculation"**, in alignment with the primary WFF methodological

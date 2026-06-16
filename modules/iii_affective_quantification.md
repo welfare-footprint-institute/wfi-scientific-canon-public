@@ -1,9 +1,8 @@
 # Module III: Affective Quantification
 
-**Status:** Scaffold prepared for scientific review
-**Prepared for review by:** Wladimir J. Alonso
-**Pending review:** Wladimir J. Alonso
-**Additional review:** To be scheduled
+**Status:** Scaffold for scientific review
+**Review status:** Pending formal WFI scientific review
+**Review record:** Tracked through the WFI canon review workflow
 
 ---
 

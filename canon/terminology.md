@@ -1,9 +1,8 @@
 # Canon: Core Terminology
 
-**Status:** Draft prepared for scientific review  
-**Prepared for review by:** Wladimir J. Alonso  
-**Pending review:** Wladimir J. Alonso  
-**Additional review:** To be scheduled  
+**Status:** Draft for scientific review  
+**Review status:** Pending formal WFI scientific review  
+**Review record:** Tracked through the WFI canon review workflow  
 **Canonical source type:** Human-readable WFF terminology canon draft  
 **Last updated:** 2026-05-15  
 **Machine-readable definitions:** `glossary/wff_terms.yaml`  

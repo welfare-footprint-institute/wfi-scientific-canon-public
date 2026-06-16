@@ -18,7 +18,7 @@ purpose: >
   public teaching and reference snapshot of the canon.
 
 source_snapshot:
-  commit: "178f65dd359284bb4138bc0b7e69608001c22f17"
+  commit: "d0ea621db2f3ef9b4db82c91ad4fade780224f4b"
   note: >
     Content reflects the WFI scientific canon as of this source snapshot
     commit. The public mirror is rebuilt from curated current files and does

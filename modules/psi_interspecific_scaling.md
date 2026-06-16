@@ -1,9 +1,8 @@
 # Module Ψ: Interspecific Affect
 
 **Status:** Scaffold — open; high uncertainty; requires extensive scientific review
-**Prepared for review by:** Wladimir J. Alonso
-**Pending review:** Wladimir J. Alonso
-**Additional review:** To be scheduled
+**Review status:** Pending formal WFI scientific review
+**Review record:** Tracked through the WFI canon review workflow
 
 > **Warning:** This module covers one of the most scientifically contested
 > areas in welfare science. Treat all content here as provisional. Do not

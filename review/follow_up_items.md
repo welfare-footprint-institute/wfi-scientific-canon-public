@@ -17,7 +17,7 @@ or non-scientific in nature (engineering, design, documentation).
 completed or transferred to canon/glossary/tools repositories
 **Last reviewed:** 2026-05-16
 **Active reviewer:** Wladimir J. Alonso
-**Additional review:** To be scheduled
+**Review record:** Tracked through the WFI canon review workflow
 
 ## Companion files
 

@@ -11,7 +11,7 @@ tracked in `review/follow_up_items.md`.**
 **Status:** active — add and track entries; do not close without human approval
 **Last reviewed:** 2026-05-16
 **Active reviewer:** Wladimir J. Alonso
-**Additional review:** To be scheduled
+**Review record:** Tracked through the WFI canon review workflow
 
 ---
 

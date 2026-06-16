@@ -1,9 +1,8 @@
 # WFF Visualization Conventions
 
-**Status:** Draft prepared for scientific review
-**Prepared for review by:** Wladimir J. Alonso
-**Pending review:** Wladimir J. Alonso
-**Additional review:** To be scheduled
+**Status:** Draft for scientific review
+**Review status:** Pending formal WFI scientific review
+**Review record:** Tracked through the WFI canon review workflow
 **Canonical source type:** Human-readable WFF visualization conventions draft
 **Last updated:** 2026-06-13
 **Related canon files:** `canon/intensity_categories_pain.md`, `canon/intensity_categories_pleasure.md`, `visualization/intensity_colors.yaml`

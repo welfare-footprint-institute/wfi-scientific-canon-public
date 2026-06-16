@@ -11,7 +11,7 @@ candidates for `review/open_questions.md`.
 do not silently reopen entries
 **Last reviewed:** 2026-05-16
 **Active reviewer:** Wladimir J. Alonso
-**Additional review:** To be scheduled
+**Review record:** Tracked through the WFI canon review workflow
 
 ---
 
