@@ -1,0 +1,201 @@
+# WFI Source Registry
+# Tracks the authoritative sources that inform WFF canon.
+# Entries here do not automatically become canon.
+# All canon updates from these sources require reviewed PRs.
+#
+# Schema version: 0.1
+# Last updated: 2026-05-12
+# Maintainers: Wladimir J. Alonso, Cynthia Schuck-Paim
+#
+# Field definitions:
+#   id:             unique slug for this source
+#   title:          full title of the source document
+#   status:         publication status (preprint-under-review | public-wfi-resource |
+#                   public-wfi-publication | internal-document)
+#   role:           what this source provides to the canon
+#   citation:       bibliographic details
+#   canonical_use:  list of canon files or constructs this source informs
+#   notes:          usage guidance, terminology warnings, or caveats
+#   review_status:  whether this entry has been verified (active | pending-review)
+
+schema_version: "0.1"
+last_updated: "2026-05-12"
+
+sources:
+
+  - id: wff-methodological-foundations-2025
+    title: >
+      Welfare Footprint Framework: Methodological Foundations and
+      Quantitative Assessment Guidelines
+    status: preprint-under-review
+    role: primary-methodological-source
+    citation:
+      authors: "Alonso, W. J., & Schuck-Paim, C."
+      year: 2025
+      publisher: "Center for Welfare Metrics (São Paulo)"
+      doi: "10.17605/osf.io/94bxs"
+      url: "https://doi.org/10.17605/osf.io/94bxs"
+      journal_submission: "Under review at Animal Sentience"
+      preferred_format: >
+        Alonso, W. J., & Schuck-Paim, C. (2025). Welfare Footprint Framework:
+        Methodological Foundations and Quantitative Assessment Guidelines.
+        Center for Welfare Metrics (São Paulo).
+        https://doi.org/10.17605/osf.io/94bxs
+    canonical_use:
+      - Full WFF framework and module structure (Modules I–VI + Ψ)
+      - Notation standards and formal expressions
+      - Methodological guidelines for all assessment steps
+      - canon/principles.md
+      - canon/terminology.md
+      - canon/uncertainty_principles.md
+      - modules/ (all)
+    notes: >
+      This is the primary citation for all WFF methodology until the
+      Animal Sentience journal version is published. Use this OSF preprint;
+      do not cite older internal drafts when this preprint is intended.
+      The updated primary methodological source (re-read 2026-05-14) uses
+      "Econometric Calculation" for Module V — this is the current canonical
+      term in this repository. "Aggregation and Standardization" appeared in
+      earlier repository scaffolding and is deprecated; treat that term as
+      superseded terminology where it appears in older drafts.
+    review_status: active
+
+  - id: wfi-technical-definitions
+    title: "Welfare Footprint Framework: Technical Definitions and Concepts"
+    status: public-wfi-resource
+    role: terminology-source
+    citation:
+      authors: "Welfare Footprint Institute"
+      year: 2026
+      url: "https://welfarefootprint.org/technical-definitions/"
+      preferred_format: >
+        Welfare Footprint Institute. (2026). Welfare Footprint Framework:
+        Technical Definitions and Concepts.
+        https://welfarefootprint.org/technical-definitions/
+    canonical_use:
+      - Operational definitions of WFF terms and modules
+      - canon/terminology.md
+      - glossary/wff_terms.yaml
+    notes: >
+      This page provides the terminology used in the Welfare Footprint
+      Framework and operational definitions. The updated Technical
+      Definitions source (re-read 2026-05-14) uses "Econometric Calculation"
+      for Module V, aligned with current canon. If any definition here
+      contradicts current canon wording, do not silently resolve; flag in
+      review/source_conflicts.md.
+    review_status: active
+
+  - id: wfi-pain-intensities
+    title: "Pain Intensity Categories"
+    status: public-wfi-resource
+    role: pain-intensity-source
+    citation:
+      authors: "Welfare Footprint Institute"
+      year: 2026
+      url: "https://welfarefootprint.org/technical-definitions/pain-intensities/"
+      preferred_format: >
+        Welfare Footprint Institute. (2026). Pain Intensity Categories.
+        https://welfarefootprint.org/technical-definitions/pain-intensities/
+    canonical_use:
+      - Definitions of Annoying, Hurtful, Disabling, and Excruciating
+        pain intensity categories
+      - canon/intensity_categories_pain.md
+    notes: >
+      Primary source for pain intensity category definitions. Do not
+      populate the [PLACEHOLDER] sections in
+      canon/intensity_categories_pain.md without referencing this source
+      and obtaining Wladimir/Cynthia approval via a reviewed PR.
+    review_status: active
+
+  - id: wfi-positive-welfare-2024
+    title: >
+      Beyond Suffering: A Framework for Quantifying Positive Animal
+      Welfare in Individuals and Populations
+    status: public-wfi-publication
+    role: positive-welfare-source
+    citation:
+      authors: "Alonso, W. J., & Schuck-Paim, C."
+      year: 2024
+      doi: "10.17605/OSF.IO/MDGJR"
+      url: "https://welfarefootprint.org/2024/03/12/positive-animal-welfare/"
+      preferred_format: >
+        Alonso, W. J., & Schuck-Paim, C. (2024). Beyond Suffering: A Framework
+        for Quantifying Positive Animal Welfare in Individuals and Populations.
+        Welfare Footprint Institute.
+        https://doi.org/10.17605/OSF.IO/MDGJR
+    canonical_use:
+      - Operational definition of Pleasure
+      - Pleasure intensity categories
+      - Pleasure-Track method and notation
+      - Cumulative Pleasure construct
+      - Rule that Pain and Pleasure are not assumed to be equivalent or netted
+      - canon/intensity_categories_pleasure.md
+    notes: >
+      Primary source for positive affect constructs in WFF.
+      canon/intensity_categories_pleasure.md cannot be substantively
+      filled until this source is reviewed and its content approved
+      for canon inclusion via a reviewed PR.
+      Pain-Track remains a valid WFF term for the method, notation,
+      app, and negative-affect-specific workflows. This source covers
+      the complementary Pleasure-Track constructs.
+    review_status: active
+
+  - id: wfi-metrics-vs-indicators-2023
+    title: >
+      Welfare Metrics and Welfare Indicators: Clarifying Essential Concepts
+      in Animal Welfare Assessment
+    status: public-wfi-publication
+    role: metrics-indicators-source
+    citation:
+      authors: "Alonso, W. J., & Schuck-Paim, C."
+      year: 2023
+      doi: "10.17605/OSF.IO/AQ2BM"
+      url: "https://welfarefootprint.org/2023/05/31/welfare-metrics-vs-welfare-indicators/"
+      preferred_format: >
+        Alonso, W. J., & Schuck-Paim, C. (2023). Welfare Metrics and Welfare
+        Indicators: Clarifying Essential Concepts in Animal Welfare Assessment.
+        Welfare Footprint Institute.
+        https://doi.org/10.17605/OSF.IO/AQ2BM
+    canonical_use:
+      - Distinction between welfare indicators as empirical/proxy measurements
+        and welfare metrics as quantitative constructs informed by indicators
+      - canon/terminology.md (Welfare Indicator and Welfare Metric entries)
+      - modules/ii_veterinary_inventory.md (required distinctions)
+    notes: >
+      Grounds the methodologically critical distinction between welfare
+      indicators (empirical proxies) and welfare metrics (quantitative
+      constructs) in canon/terminology.md and Module II.
+      If any wording in this source contradicts current canon, flag in
+      review/source_conflicts.md.
+    review_status: active
+
+  - id: wfi-ai-tools-applications
+    title: "AI Tools & Applications"
+    status: public-wfi-resource
+    role: ai-tools-reference
+    citation:
+      authors: "Welfare Footprint Institute"
+      year: 2026
+      url: "https://welfarefootprint.org/ai-tools-applications/"
+      preferred_format: >
+        Welfare Footprint Institute. (2026). AI Tools & Applications.
+        https://welfarefootprint.org/ai-tools-applications/
+    canonical_use:
+      - Current names and scope of WFI AI tools
+      - Zootechnical Mapper GPT
+      - AffectMap GPT
+      - Hedonic-Track GPT (current tool supporting full welfare analysis,
+        including Pain-Tracks and Pleasure-Tracks)
+      - Interspecific Affect GPT
+      - Epidemiology for Animal Welfare GPT
+      - Neurophilosopher GPT
+      - Food Welfare Explorer
+      - glossary/deprecated_terms.yaml (Pain-Track GPT → Hedonic-Track GPT entry)
+    notes: >
+      This page identifies Hedonic-Track GPT as the current tool supporting
+      full welfare analysis, including Pain-Tracks and Pleasure-Tracks.
+      Pain-Track remains a valid and important WFF term for the method,
+      notation, app, and negative-affect-specific workflows. Only the
+      specific Custom GPT tool name changed from "Pain-Track GPT" to
+      "Hedonic-Track GPT."
+    review_status: active

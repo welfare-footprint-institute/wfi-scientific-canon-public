@@ -1,0 +1,22 @@
+# Claude Code local settings — personal preferences, never shared
+.claude/settings.local.json
+# Claude Code worktree artifacts — tooling residue, never commit
+.claude/worktrees/
+
+# OS artefacts
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor artefacts
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Secrets and credentials — belt-and-suspenders guard
+.env
+.env.*
+secrets/
+config/credentials.json

@@ -1,0 +1,1445 @@
+# WFF Canonical Terms
+# Machine-readable glossary for the Welfare Footprint Framework.
+# Human-readable definitions with context: see canon/terminology.md
+#
+# Status: draft — requires review by Wladimir J. Alonso / Cynthia Schuck-Paim
+# Phase: 1.3
+# Last updated: 2026-05-15
+#
+# Schema per entry:
+#   id:          stable lowercase underscore slug
+#   term:        canonical display name
+#   status:      active | review-needed
+#   module:      module or section this term belongs to
+#   definition:  short definition (nuance in canon/terminology.md)
+#   source_ids:  list of source IDs from sources/source_registry.yaml
+#   notes:       optional usage guidance or caveats
+#
+# Note: this file is a minimal sync with canon/terminology.md. Schema
+# enrichment (conceptual_role, wff_chain_level, constraints, examples,
+# non_examples, related_terms, deprecated_aliases, review_status, version)
+# is deferred to a follow-up PR per canon/terminology.md §13.
+
+terms:
+
+  # ─── Core Framework ───────────────────────────────────────────────────────
+
+  - id: welfare
+    term: Welfare
+    status: active
+    module: core-framework
+    definition: >
+      All negative and positive affective states experienced by an
+      individual over a period of interest.
+    source_ids:
+      - wfi-technical-definitions
+    notes: >
+      This is the WFF operational scope of welfare. Aspects of health or
+      function are relevant only insofar as they influence affective
+      experiences.
+
+  - id: welfare_footprint_framework
+    term: Welfare Footprint Framework
+    status: active
+    module: core-framework
+    definition: >
+      A scientific methodology for quantifying animal welfare by measuring
+      the intensity, duration, and population-level distribution of animals'
+      negative and positive Affective Experiences across six core analytical
+      modules (I–VI) and one optional interspecific module (Ψ). Preserves
+      the causal chain: Circumstances → Biological Consequences →
+      Affective Experiences → Welfare Metrics.
+    source_ids:
+      - wff-methodological-foundations-2025
+      - wfi-technical-definitions
+    notes: null
+
+  - id: welfare_footprint
+    term: Welfare Footprint
+    status: active
+    module: core-framework
+    definition: >
+      A quantitative measurement of the welfare impact of actions, practices,
+      products, interventions, policies, or processes on animals, assessed by
+      estimating time spent in negative and positive Affective States of
+      different intensities. Captures intensity, duration, and prevalence /
+      population distribution.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: >
+      Results are expressed as Cumulative Pain and Cumulative Pleasure,
+      disaggregated by intensity category. May be standardized per
+      individual, population, unit of product, dollar spent, or other
+      decision-relevant denominator.
+
+  - id: welfare_assessment
+    term: Welfare Assessment — Guiding Principle
+    status: active
+    module: core-framework
+    definition: >
+      The guiding principle that WFF welfare assessments focus primarily on
+      measuring Affective Experiences. Health, biological function, and
+      natural living are relevant only to the extent they influence the
+      animal's subjective negative or positive Affective Experiences.
+    source_ids:
+      - wfi-technical-definitions
+    notes: >
+      Subclinical conditions, growth impairment, physical disabilities, or
+      resource deprivations are not treated as welfare impacts in themselves
+      unless associated with unpleasantness, loss of positive experience, or
+      other affective consequence.
+
+  - id: welfare_indicator
+    term: Welfare Indicator
+    status: active
+    module: core-framework
+    definition: >
+      A discernible trait, signal, or condition that, based on evidence, is
+      correlated with an individual's Affective Experience or Affective State.
+      Welfare Indicators are pieces of evidence used to inform inferences
+      about welfare; they are not Welfare Metrics.
+    source_ids:
+      - wfi-technical-definitions
+      - wfi-metrics-vs-indicators-2023
+    notes: >
+      Indicators may be animal-based or resource-based, and include
+      neurological, physiological, behavioral, environmental, pharmacological,
+      immune, anatomical, and management-related factors.
+
+  - id: welfare_metric
+    term: Welfare Metric
+    status: active
+    module: core-framework
+    definition: >
+      A quantitative construct used to evaluate and compare animal welfare
+      across situations, populations, interventions, systems, or time periods.
+      Informed by Welfare Indicators but distinct: indicators are evidence
+      about Affective Experiences; metrics are standardized constructs
+      expressing welfare impacts.
+    source_ids:
+      - wfi-technical-definitions
+      - wfi-metrics-vs-indicators-2023
+    notes: >
+      Cumulative Pain and Cumulative Pleasure are the WFF primary Welfare
+      Metrics. These may be standardized per individual, population, unit
+      of product, or other decision-relevant denominator to express a
+      Welfare Footprint.
+
+  # ─── Cross-Cutting Concepts ───────────────────────────────────────────────
+
+  - id: analytical_boundaries
+    term: Analytical Boundaries
+    status: active
+    module: cross-cutting
+    definition: >
+      The defined scope of a Welfare Footprint assessment, specifying
+      Species, System or Production System, Life-Fates, Life-Phases,
+      Circumstances, Affective Experiences, Target Population, geography,
+      timeframe, and level of analysis included. Estimates from assessments
+      with different Analytical Boundaries are not directly comparable
+      without explicit reconciliation.
+    source_ids:
+      - wff-methodological-foundations-2025
+      - wfi-technical-definitions
+    notes: null
+
+  - id: plausible_scenario
+    term: Plausible Scenario
+    status: active
+    module: cross-cutting
+    definition: >
+      A structured set of assumptions or parameter values used to represent
+      welfare impacts that are plausible given current knowledge. Used when
+      relevant inputs are uncertain, heterogeneous, incompletely observed,
+      context-dependent, or contested. Grounded in real operating conditions,
+      biological mechanisms, analogous systems, expert judgment, or other
+      relevant evidence — not abstract best-case or worst-case bounds.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: null
+
+  - id: sensitivity_analysis
+    term: Sensitivity Analysis
+    status: active
+    module: cross-cutting
+    definition: >
+      A procedure for testing how WFF estimates and conclusions change
+      across Plausible Scenarios and uncertain parameter values. May be
+      applied to any parameter in the framework. Its purpose is to reveal
+      whether uncertain data matter for the conclusion at hand and to
+      identify which parameters most strongly influence results.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: null
+
+  - id: traceability
+    term: Traceability
+    status: active
+    module: cross-cutting
+    definition: >
+      The preservation of the full analytical pathway linking a Welfare
+      Footprint estimate back to its underlying evidence, assumptions,
+      parameters, and intermediate calculations. Requires that estimates
+      remain linked, in auditable form, to underlying Species, System,
+      Life-Fates, Life-Phases, Circumstances, Biological Consequences,
+      Affective Experiences, prevalence and occurrence estimates,
+      Productivity Metrics, accounting and standardization assumptions,
+      and uncertainty ranges.
+    source_ids:
+      - wff-methodological-foundations-2025
+      - wfi-technical-definitions
+    notes: >
+      In digital implementations such as the Welfare Footprint Atlas,
+      Traceability should be treated as a core design principle, allowing
+      each final estimate to be decomposed back into its component
+      assumptions, sources, and calculation steps.
+
+  - id: provenance
+    term: Provenance
+    status: active
+    module: cross-cutting
+    definition: >
+      The structured record of the origin, authorship, evidence basis,
+      version, timestamp, review status, and analytical context of a WFF
+      object, parameter, assumption, or estimate.
+    source_ids:
+      - wff-methodological-foundations-2025
+      - wfi-technical-definitions
+    notes: >
+      Distinct from, but required for, Traceability. Traceability preserves
+      the analytical pathway; Provenance records where the components came
+      from and how they have been created, modified, reviewed, accepted,
+      superseded, or deprecated.
+
+  - id: scope_qualifier
+    term: Scope Qualifier
+    status: active
+    module: cross-cutting
+    definition: >
+      An explicit label appended to a Cumulative Pain, Cumulative Pleasure,
+      or Cumulative Affect estimate that specifies the analytical level and
+      time period to which the estimate applies. Required because estimates
+      with different Analytical Boundaries are not directly comparable.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: >
+      Examples: Cumulative Pain [Episode], Cumulative Pleasure [Life-Phase],
+      Cumulative Pain [Lifespan], Cumulative Pleasure [per liter of milk],
+      Cumulative Pain [per kg of meat].
+
+  - id: cumulative_affect_baseline
+    term: "Cumulative Affect [Baseline]"
+    status: active
+    module: cross-cutting
+    definition: >
+      The default form of Cumulative Affect estimation, in which each
+      Affective Experience is analyzed independently and results are
+      accounted for across experiences while preserving disaggregation by
+      valence and intensity category. A transparent default accounting
+      estimate, not necessarily a precise estimate of what the animal is
+      consciously attending to at every moment when multiple Affective
+      Experiences occur concurrently.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: null
+
+  - id: cumulative_affect_attention_adjusted
+    term: "Cumulative Affect [Attention-Adjusted]"
+    status: active
+    module: cross-cutting
+    definition: >
+      An optional post-quantification refinement of Cumulative Affect that
+      accounts for competition between concurrent Affective States for
+      limited attentional resources. Requires evidence about comorbidity
+      patterns, co-occurrence frequencies, and attentional demand at
+      different intensity levels.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: null
+
+  - id: intensity_category
+    term: Intensity Category
+    status: active
+    module: cross-cutting
+    definition: >
+      A defined level of affective intensity used to disaggregate Cumulative
+      Pain and Cumulative Pleasure. Pain categories: Annoying (1), Hurtful (2),
+      Disabling (3), Excruciating (4). Pleasure categories: Satisfaction (1),
+      Joy (2), Euphoria (3), Bliss (4).
+    source_ids:
+      - wfi-technical-definitions
+      - wfi-pain-intensities
+      - wfi-positive-welfare-2024
+    notes: >
+      See canon/intensity_categories_pain.md and
+      canon/intensity_categories_pleasure.md for operational definitions.
+
+  - id: duration
+    term: Duration
+    status: active
+    module: cross-cutting
+    definition: >
+      The length of time an affective experience or biological condition
+      persists in an individual. A core input to Cumulative Pain and
+      Cumulative Pleasure calculations. Should be expressed as ranges to
+      reflect uncertainty and biological variation.
+    source_ids:
+      - wff-methodological-foundations-2025
+      - wfi-technical-definitions
+    notes: null
+
+  - id: hedonic_track_gpt
+    term: Hedonic-Track GPT
+    status: active
+    module: tooling
+    definition: >
+      The current WFI custom GPT tool supporting full welfare analysis,
+      including both Pain-Track and Pleasure-Track workflows. Replaces the
+      deprecated "Pain-Track GPT" tool name. Tool name only.
+    source_ids:
+      - wfi-ai-tools-applications
+    notes: >
+      This entry is a WFI tool name, not a WFF framework term. It is
+      retained here temporarily for discoverability and should be moved to
+      a dedicated tools/wfi_tools.yaml registry in a follow-up PR. Do not
+      treat Hedonic-Track GPT as a WFF chain-level term.
+      Scope of the rename: only the specific Custom GPT / agent tool name
+      "Pain-Track GPT" is superseded by "Hedonic-Track GPT". Pain-Track
+      itself remains a valid WFF term for the method, notation, the
+      Pain-Track App, and negative-affect-specific workflows. Pleasure-Track
+      remains a valid WFF methodological term. See
+      glossary/deprecated_terms.yaml.
+
+  # ─── Module I: Zootechnical Description ───────────────────────────────────
+
+  - id: species
+    term: Species
+    status: active
+    module: module-I
+    definition: The sentient species under examination in a given WFF assessment.
+    source_ids:
+      - wfi-technical-definitions
+    notes: null
+
+  - id: production_system
+    term: System and Production System
+    status: active
+    module: module-I
+    definition: >
+      The living context in which the population of interest exists.
+      "System" is the broader term and may include farming systems, zoos,
+      sanctuaries, laboratories, natural habitats, or socio-economic
+      environments. "Production System" refers specifically to systems in
+      which animals are bred, raised, kept, or used for productive purposes.
+    source_ids:
+      - wfi-technical-definitions
+    notes: null
+
+  - id: life_fate
+    term: Life-Fate
+    status: active
+    module: module-I
+    definition: >
+      A category of individuals within a species or system that share a
+      sufficiently similar life trajectory, defined by commonalities in
+      roles, exposures, critical life events, hazards, and welfare-relevant
+      outcomes. Different Life-Fates within the same System are assessed
+      separately when their Circumstances, Life-Phases, Biological
+      Consequences, or Affective Experiences differ in welfare-relevant ways.
+    source_ids:
+      - wfi-technical-definitions
+    notes: >
+      Examples in pigs: breeding females (sows), market pigs, male breeders.
+
+  - id: life_phase
+    term: Life-Phase
+    status: active
+    module: module-I
+    definition: >
+      A major biological or operational stage within a given Life-Fate,
+      characterized by distinct Circumstances, exposures, challenges, and
+      welfare implications. Life-Phases provide the temporal structure for
+      describing Circumstances and identifying Biological Consequences.
+    source_ids:
+      - wfi-technical-definitions
+    notes: null
+
+  - id: circumstance
+    term: Circumstance
+    status: active
+    module: module-I
+    definition: >
+      The internal and external conditions that shape an animal's life
+      during each Life-Phase. External Circumstances include physical,
+      social, environmental, procedural, and management-related conditions.
+      Internal Circumstances include animal attributes that shape
+      vulnerability, response, or exposure, such as breed, line, genotype,
+      sex, age, developmental status, and genetic predispositions.
+    source_ids:
+      - wff-methodological-foundations-2025
+      - wfi-technical-definitions
+    notes: >
+      Circumstances do not directly cause Affective Experiences; they do so
+      through Biological Consequences. Internal Circumstances (genetic or
+      developmental attributes) must not be conflated with Biological
+      Consequences (organism-level changes such as injuries, diseases, or
+      inflammation). SC-002 resolved. See canon/terminology.md.
+
+  - id: species_specific_needs
+    term: Species-Specific Needs
+    status: active
+    module: module-I
+    definition: >
+      The nutritional, environmental, health-related, behavioral, social,
+      and psychological requirements of a species that shape how
+      Circumstances are likely to affect them. Species-Specific Needs are
+      welfare-relevant to the extent that meeting or failing to meet them
+      influences Affective Experiences.
+    source_ids:
+      - wfi-technical-definitions
+    notes: >
+      Frameworks such as the Five Domains can help organize the
+      identification of these needs.
+
+  - id: productivity_metrics
+    term: Productivity Metrics
+    status: active
+    module: module-I
+    definition: >
+      Commercial output variables associated with the system under analysis,
+      such as kilograms of meat, liters of milk, number or mass of eggs,
+      live weight sold, carcass weight, or other commercially significant
+      animal-derived outputs over a defined period or cycle. Used in Module V
+      to express cumulative affective estimates per unit of commercial output.
+    source_ids:
+      - wfi-technical-definitions
+    notes: >
+      Productivity Metrics are commercial output-denominator variables only.
+      Population-flow data (numbers of animals per Life-Fate, mortality rates,
+      replacement rates, phase durations) supports the welfare-burden numerator
+      as Population Accounting — it is not Productivity. Module I records both
+      Population Accounting and candidate Productivity Metric denominators;
+      Module V determines allocation and standardisation. Processed-product
+      denominators (e.g. kg salami, sausages) apply only when processing is
+      inside the analytical boundary. See modules/i_zootechnical_description.md.
+
+  - id: processogram
+    term: Processogram
+    status: active
+    module: module-I
+    definition: >
+      A spatiotemporal process diagram conveying a time-ordered description
+      of typical life stages, production phases, and welfare-relevant
+      Circumstances experienced by a Life-Fate within a System or Production
+      System. Spatial components are represented, where possible, in
+      realistic proportion to real-life conditions, arranged along a
+      horizontal time axis representing the passage of time.
+    source_ids:
+      - wfi-technical-definitions
+    notes: >
+      Used to map Biological Consequences within each phase and display the
+      proportion of animals affected at phase onset. The Processogram source
+      should be added to sources/source_registry.yaml before this term is
+      treated as fully source-resolved.
+
+  # ─── Module II: Veterinary Inventory ──────────────────────────────────────
+
+  - id: biological_consequence
+    term: Biological Consequence
+    status: active
+    module: module-II
+    definition: >
+      A physiological, anatomical, neurological, perceptual, or cognitive
+      change resulting from exposure to internal or external Circumstances,
+      or generated or modulated by prior Affective Experiences. Includes
+      physical manifestations (wounds, inflammation, disease processes,
+      metabolic imbalances) and perceptual or cognitive states (perception
+      of threat, perception of social isolation, perception of lack of agency).
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: >
+      Biological Consequences are organism-level responses that may act as
+      proximate precursors to Affective Experiences. They are not themselves
+      the welfare endpoint unless consciously felt. Some may be subclinical
+      and matter only because they increase the likelihood, intensity,
+      duration, recurrence, or complexity of downstream Affective Experiences.
+
+  - id: physical_consequence_negative
+    term: Physical Consequence Leading to Negative Affective Experiences
+    status: active
+    module: module-II
+    definition: >
+      A physical Biological Consequence involving detrimental anatomical,
+      physiological, neurological, or metabolic change that may give rise
+      to, prolong, intensify, or increase vulnerability to negative
+      Affective Experiences. Examples include wounds, fractures,
+      inflammation, infection, dehydration, malnutrition, metabolic
+      imbalance, respiratory pathology, or tissue damage.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: >
+      Renamed from the prior glossary entry "Negative Physical Consequence"
+      to match canon/terminology.md (2026-05-15).
+
+  - id: perceptual_consequence_negative
+    term: Perceptual Consequence Leading to Negative Affective Experiences
+    status: active
+    module: module-II
+    definition: >
+      A perceptual or cognitive Biological Consequence that may give rise
+      to negative Affective Experiences without necessarily involving
+      physical injury or bodily pathology. Examples include perception of
+      threat, perception of social isolation, perception of lack of agency,
+      perception of environmental instability, exposure to aversive sensory
+      stimuli, or perception that a highly motivated behavior is blocked.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: >
+      Terminology must remain strictly sensory, cognitive, or motivational.
+      Emotionally loaded terms ("loneliness", "fear", "frustration",
+      "distress") are reserved for the resulting Affective Experience.
+      Renamed from the prior glossary entry "Negative Perceptual Consequence"
+      to match canon/terminology.md (2026-05-15).
+
+  - id: physical_consequence_positive
+    term: Physical Consequence Leading to Positive Affective Experiences
+    status: active
+    module: module-II
+    definition: >
+      A physical Biological Consequence or bodily interaction involving
+      restoration, improvement, or favorable change in the animal's bodily
+      or physiological state that may give rise to positive Affective
+      Experiences. Examples include ingestion of preferred food, drinking
+      after thirst, relief of physical discomfort, successful
+      thermoregulation, grooming-related tactile stimulation, or copulation.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: >
+      Renamed from the prior glossary entry "Positive Physical Consequence"
+      to match canon/terminology.md (2026-05-15).
+
+  - id: perceptual_consequence_positive
+    term: Perceptual Consequence Leading to Positive Affective Experiences
+    status: active
+    module: module-II
+    definition: >
+      A perceptual or cognitive Biological Consequence that may give rise
+      to positive Affective Experiences without necessarily depending on a
+      prior physical deficit. Examples include perception of safety,
+      recognition of affiliative social partners, perception of environmental
+      opportunity, successful expression of motivated behavior, access to
+      novelty, play opportunities, exploration, or perceived control over
+      the environment.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: >
+      Renamed from the prior glossary entry "Positive Perceptual Consequence"
+      to match canon/terminology.md (2026-05-15).
+
+  - id: negative_affective_experience
+    term: Negative Affective Experience
+    status: active
+    module: module-II
+    definition: >
+      An Affective Experience that is consciously felt as unpleasant.
+      In the WFF, negative Affective Experiences are operationally grouped
+      under Pain, broadly understood as any felt negative affective state,
+      whether physical or psychological.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: null
+
+  - id: positive_affective_experience
+    term: Positive Affective Experience
+    status: active
+    module: module-II
+    definition: >
+      An Affective Experience that is consciously felt as pleasant.
+      In the WFF, positive Affective Experiences are operationally grouped
+      under Pleasure, broadly understood as any felt positive affective
+      state, whether physical or psychological.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: null
+
+  - id: affective_experience_mapping
+    term: Affective Experience Mapping
+    status: active
+    module: module-II
+    definition: >
+      The explicit linking of Circumstances, Biological Consequences, and
+      the Affective Experiences expected to arise from them within the
+      Veterinary Inventory. In Module II, Affective Experiences are
+      identified, named, and linked to their Biological Consequences and
+      Circumstances; their intensity, duration, temporal segmentation, and
+      cumulative burden are then estimated in Module III.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: >
+      Where feasible, Affective Experiences may be described using the
+      structure: Affective Experience x due to Biological Consequence(s) y
+      caused or modulated by Circumstance(s) z.
+
+  - id: biological_consequence_pathway
+    term: Biological Consequence Pathway
+    status: active
+    module: module-II
+    definition: >
+      A causal sequence through which one or more Biological Consequences
+      give rise to one or more Affective Experiences. May be simple or
+      complex and may differ by severity, temporal course, recurrence,
+      reversibility, treatment status, or outcome.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: >
+      Renamed from the prior glossary entry "Pathway" to match
+      canon/terminology.md (2026-05-15).
+
+  - id: biological_consequence_severity
+    term: Biological Consequence Severity
+    status: active
+    module: module-II
+    definition: >
+      The magnitude, grade, or clinical scale of a Biological Consequence,
+      defined using observable, clinical, anatomical, physiological,
+      behavioral, or other evidence-based criteria.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: >
+      Distinct from the intensity of the resulting Affective Experience.
+      A more severe Biological Consequence may often increase the
+      probability, intensity, duration, recurrence, or complexity of
+      downstream Affective Experiences, but this relationship must be
+      assessed rather than assumed. Renamed from the prior glossary entry
+      "Severity" to match canon/terminology.md (2026-05-15).
+
+  - id: degree_of_deprivation
+    term: Degree of Deprivation
+    status: active
+    module: module-II
+    definition: >
+      The extent to which a Circumstance fails to satisfy, partially
+      satisfies, or blocks a Species-Specific Need or motivated behavior
+      during a given Life-Phase. Different degrees of deprivation should be
+      disaggregated when they are expected to produce distinct Biological
+      Consequences or Affective Experiences.
+    source_ids:
+      - wfi-technical-definitions
+    notes: null
+
+  - id: degree_of_fulfillment
+    term: Degree of Fulfillment
+    status: active
+    module: module-II
+    definition: >
+      The extent to which a Circumstance satisfies, partially satisfies, or
+      fully satisfies a Species-Specific Need or motivated behavior during a
+      given Life-Phase. Different degrees of fulfillment should be
+      disaggregated when they are expected to produce distinct Biological
+      Consequences or positive Affective Experiences.
+    source_ids:
+      - wfi-technical-definitions
+    notes: null
+
+  # ─── Module III: Affective Quantification ─────────────────────────────────
+
+  - id: affective_experience
+    term: Affective Experience
+    status: active
+    module: module-III
+    definition: >
+      The complete, dynamic, consciously felt episode resulting from one or
+      more Biological Consequences. Can be negative or positive, and is
+      characterized by valence, intensity, duration, and temporal evolution.
+      In the WFF, Affective Experiences are the welfare endpoints quantified
+      by the framework.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: >
+      May be described generally as "Pain from..." or "Pleasure from...",
+      while preserving more specific descriptions when useful.
+
+  - id: affective_state
+    term: Affective State
+    status: active
+    module: module-III
+    definition: >
+      The specific valence and intensity condition an animal is hypothesized
+      to occupy at a given point or time segment within an Affective
+      Experience (e.g., Annoying, Hurtful, Joy, Euphoria).
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: >
+      Although many Affective Experiences are predominantly negative or
+      positive, an episode may contain segments of different valence; in
+      such cases, segments are accounted separately by valence and intensity.
+
+  - id: temporal_segmentation
+    term: Temporal Segmentation
+    status: active
+    module: module-III
+    definition: >
+      The decomposition of an Affective Experience into meaningful time
+      segments, each characterized by a relatively stable hypothesized
+      intensity. Segment boundaries should reflect expected changes in the
+      felt experience.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: null
+
+  - id: pain
+    term: Pain
+    status: active
+    module: module-III
+    definition: >
+      In the WFF, Pain refers to any felt negative affective state.
+      Includes physical Pain (aches, hunger, injuries, breathlessness,
+      nausea, thirst, thermal discomfort) and psychological Pain (fear,
+      anxiety, frustration, boredom, sadness, distress). The umbrella term
+      for negative Affective Experiences.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: null
+
+  - id: pain_intensity
+    term: Pain Intensity
+    status: active
+    module: module-III
+    definition: >
+      The estimated degree of unpleasantness, aversiveness, disruption, or
+      attention capture experienced by an individual at a given point or
+      time segment within a negative Affective Experience. A hypothesis about
+      subjective severity, informed by behavioral, physiological, neurological,
+      pharmacological, anatomical, evolutionary, and other relevant evidence.
+    source_ids:
+      - wfi-technical-definitions
+      - wfi-pain-intensities
+    notes: >
+      Categories: Annoying (1), Hurtful (2), Disabling (3), Excruciating (4).
+      Periods without Pain may be recorded as "No Pain". See
+      canon/intensity_categories_pain.md.
+
+  - id: pain_track
+    term: Pain-Track
+    status: active
+    module: module-III
+    definition: >
+      A notation method for describing a negative Affective Experience
+      according to its temporal evolution. Horizontal axis: time segments;
+      vertical axis: Pain Intensity. For each segment, duration is expressed
+      as a range where appropriate, and intensity may be expressed as a
+      probability distribution across defined Pain Intensity categories.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: >
+      Pain-Track is a valid and important WFF term for the method, notation,
+      the Pain-Track App, and negative-affect-specific workflows. Do not
+      confuse with "Pain-Track GPT" (deprecated tool name). See
+      glossary/deprecated_terms.yaml.
+
+  - id: cumulative_pain
+    term: Cumulative Pain
+    status: active
+    module: module-III
+    definition: >
+      The total estimated time an individual or population spends in negative
+      Affective States of varying intensities over a period of interest.
+      Calculated by estimating the duration of each time segment, assigning
+      probabilities or estimates to each Pain Intensity category, and summing
+      time within each category across segments. Maintained as a disaggregated
+      metric: time in Annoying, Hurtful, Disabling, and Excruciating is
+      reported separately.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: >
+      Aggregation rule: sum like with like. Do not collapse, weight, or
+      create equivalences between intensity categories unless an additional
+      analytical layer explicitly applies such assumptions.
+
+  - id: pleasure
+    term: Pleasure
+    status: active
+    module: module-III
+    definition: >
+      In the WFF, Pleasure refers to any felt positive affective state.
+      Includes physical and psychological positive experiences such as
+      comfort, relief, satiety, Satisfaction, Joy, Euphoria, play-related
+      Pleasure, affiliative Pleasure, exploratory Pleasure, and Pleasure
+      from preferred food, grooming, or other rewarding experiences.
+    source_ids:
+      - wfi-technical-definitions
+      - wfi-positive-welfare-2024
+    notes: >
+      Pain and Pleasure are not assumed to sit on a simple common scale and
+      are not automatically netted. Any aggregation or trade-off would
+      require explicit additional assumptions and is not part of the
+      baseline metric.
+
+  - id: pleasure_intensity
+    term: Pleasure Intensity
+    status: active
+    module: module-III
+    definition: >
+      The estimated degree of pleasantness, reward, engagement, or attention
+      capture experienced by an individual at a given point or time segment
+      within a positive Affective Experience. Categories are defined primarily
+      by degree of engagement and the extent to which the experience occupies
+      attention or motivates continued interaction.
+    source_ids:
+      - wfi-technical-definitions
+      - wfi-positive-welfare-2024
+    notes: >
+      Categories: Satisfaction (1), Joy (2), Euphoria (3), Bliss (4).
+      Periods without Pleasure may be recorded as "No Pleasure". See
+      canon/intensity_categories_pleasure.md.
+
+  - id: pleasure_track
+    term: Pleasure-Track
+    status: active
+    module: module-III
+    definition: >
+      A notation method for describing a positive Affective Experience
+      according to its temporal evolution, analogous to the Pain-Track.
+      Horizontal axis: time segments; vertical axis: Pleasure Intensity.
+      For each segment, duration is expressed as a range where appropriate,
+      and intensity may be expressed as a probability distribution across
+      defined Pleasure Intensity categories.
+    source_ids:
+      - wfi-technical-definitions
+      - wfi-positive-welfare-2024
+    notes: null
+
+  - id: cumulative_pleasure
+    term: Cumulative Pleasure
+    status: active
+    module: module-III
+    definition: >
+      The total estimated time an individual or population spends in
+      positive Affective States of varying intensities over a period of
+      interest. Calculated analogously to Cumulative Pain. Maintained as a
+      disaggregated metric: time in Satisfaction, Joy, Euphoria, and Bliss
+      is reported separately.
+    source_ids:
+      - wfi-technical-definitions
+      - wfi-positive-welfare-2024
+    notes: >
+      Aggregation rule: sum like with like. Never combined with Cumulative
+      Pain. No equivalence between pain and pleasure intensity categories
+      is assumed.
+
+  - id: cumulative_affect
+    term: Cumulative Affect
+    status: active
+    module: module-III
+    definition: >
+      An umbrella term for the joint representation of Cumulative Pain and
+      Cumulative Pleasure over a period of interest. The full disaggregated
+      profile of estimated time spent in negative and positive Affective
+      States of different intensities.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: >
+      Not a single net welfare score and not a third primary Welfare Metric
+      replacing Cumulative Pain and Cumulative Pleasure. Must specify a
+      Scope Qualifier and declare the calculation variant
+      (Baseline | Attention-Adjusted).
+
+  # ─── Module IV: Epidemiological Review ────────────────────────────────────
+
+  - id: target_population
+    term: Target Population
+    status: active
+    module: module-IV
+    definition: >
+      The specific group of animals to which an epidemiological estimate
+      applies, defined by shared characteristics, Life-Fate, Life-Phase,
+      System or Production System, geography, timeframe, and relevant
+      living conditions.
+    source_ids:
+      - wfi-technical-definitions
+    notes: null
+
+  - id: prevalence
+    term: Prevalence
+    status: active
+    module: module-IV
+    definition: >
+      The proportion of a Target Population affected by a given Biological
+      Consequence, or by a directly estimated Affective Experience where
+      appropriate, during the analyzed timeframe.
+    source_ids:
+      - wfi-technical-definitions
+    notes: >
+      Should normally be expressed as a range rather than a point estimate,
+      to reflect natural variation across subpopulations and epistemic
+      uncertainty from data limitations. Where possible, these sources of
+      uncertainty should be distinguished.
+
+  - id: occurrence
+    term: Occurrence
+    status: active
+    module: module-IV
+    definition: >
+      The number of times an affected animal typically experiences,
+      develops, undergoes, or is exposed to a given Biological Consequence
+      during the analyzed timeframe. Distinct from Prevalence: Prevalence
+      = how many animals are affected; Occurrence = how often affected
+      animals experience the condition, event, or exposure.
+    source_ids:
+      - wfi-technical-definitions
+    notes: null
+
+  - id: affective_episode_rate
+    term: Affective Episode Rate
+    status: active
+    module: module-IV
+    definition: >
+      The expected number of discrete Affective Experiences generated by
+      each occurrence of a Biological Consequence. Needed because the
+      relationship between Biological Consequences and Affective Experiences
+      is not always one-to-one.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: >
+      For continuous conditions, the total accumulated duration of the
+      Affective Experience per occurrence or exposure period should be used
+      directly rather than forcing the burden into discrete episodes.
+
+  - id: population_distribution
+    term: Population Distribution
+    status: active
+    module: module-IV
+    definition: >
+      The distribution of Biological Consequences and Affective Experiences
+      across the Target Population, including variation by Life-Fate,
+      Life-Phase, subgroup, geography, management condition, severity class,
+      exposure level, or other relevant stratifier.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: null
+
+  - id: average_population_member
+    term: Average Population Member
+    status: active
+    module: module-IV
+    definition: >
+      An analytical construct used to estimate the per-capita welfare burden
+      of a Target Population. Represents the expected Cumulative Pain or
+      Cumulative Pleasure assigned to an average member of the population,
+      even when no real individual experiences exactly that profile.
+    source_ids:
+      - wfi-technical-definitions
+    notes: >
+      Allows welfare burdens to be compared across Biological Consequences,
+      Affective Experiences, Life-Fates, Life-Phases, Systems, and
+      population groups while preserving disaggregation by valence and
+      intensity category.
+
+  # ─── Module V: Econometric Calculation ────────────────────────────────────
+
+  - id: econometric_calculation
+    term: Econometric Calculation
+    status: active
+    module: module-V
+    definition: >
+      The WFF module in which cumulative affective estimates are related to
+      the productive, population, temporal, or decision-relevant units
+      required by the assessment. In product-focused analyses, uses
+      Productivity Metrics from Module I (e.g., kg of meat, liters of milk,
+      eggs) to express Cumulative Pain and Cumulative Pleasure per unit of
+      product. May involve accounting across multiple Life-Fates, Life-Phases,
+      population groups, and Affective Experiences while preserving
+      disaggregation by valence and intensity category.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: >
+      "Aggregation and Standardization" was used in earlier repository
+      scaffolding and is deprecated. The primary WFF methodological source
+      and the Technical Definitions source both use "Econometric Calculation."
+      See SC-001 in review/source_conflicts.md and glossary/deprecated_terms.yaml.
+      "Econometric" here refers broadly to the quantitative linking of
+      welfare estimates to system outputs, population units, time periods, or
+      decision-relevant denominators; it does not imply monetary valuation,
+      willingness-to-pay estimates, or economic preference modelling.
+
+  - id: life_fate_accounting
+    term: Life-Fate Accounting
+    status: active
+    module: module-V
+    definition: >
+      The process of accounting for Cumulative Pain and Cumulative Pleasure
+      across multiple Life-Fates included within the Analytical Boundaries
+      of the assessment. In product-focused analyses, allocates the welfare
+      burdens and benefits of different Life-Fates according to their
+      contribution to the production system or product output.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: >
+      Renamed from the prior glossary entry "Life-Fate Weighting" to match
+      canon/terminology.md (2026-05-15).
+
+  - id: welfare_footprint_per_unit_of_product
+    term: Welfare Footprint per Unit of Product
+    status: active
+    module: module-V
+    definition: >
+      The standardized expression of Cumulative Pain and Cumulative Pleasure
+      per unit of animal-derived product, such as per kilogram of meat, liter
+      of milk, egg, dozen eggs, or other defined product unit. Calculated by
+      dividing relevant system-level cumulative affective estimates by
+      corresponding Productivity Metrics; where applicable, estimates should
+      account for carcass yield, product yield, pre-slaughter mortality,
+      culling, replacement rates, reproductive output, and chain losses.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: >
+      Examples: hours of Disabling Pain per kilogram of meat;
+      hours of Hurtful Pain per liter of milk;
+      hours of Satisfaction per dozen eggs;
+      hours of Excruciating Pain per egg.
+      Renamed from the prior glossary entry "Welfare Footprint per Unit of
+      Output" to match canon/terminology.md (2026-05-15).
+
+  - id: alternative_denominators
+    term: Alternative Denominators
+    status: active
+    module: module-V
+    definition: >
+      Non-product denominators against which Cumulative Pain and Cumulative
+      Pleasure may also be expressed when relevant to the decision context.
+      Examples include estimates per animal, per average population member,
+      per population, per year, per person in a human population, per dollar
+      spent, per intervention, per company, per region, per country, or per
+      unit of GDP.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: >
+      Renamed from the prior glossary entry "Alternative Standardization"
+      to match canon/terminology.md (2026-05-15).
+
+  - id: scope_and_disaggregation_requirements
+    term: Scope and Disaggregation Requirements
+    status: active
+    module: module-V
+    definition: >
+      Requirements for outputs from Econometric Calculation: must preserve
+      the Analytical Boundaries and disaggregation required for interpretation;
+      must identify the denominator used, the level of analysis, and whether
+      the estimate refers to Cumulative Pain, Cumulative Pleasure, or
+      Cumulative Affect. Must preserve Traceability linking final standardized
+      estimates to the underlying Circumstances, Biological Consequences,
+      Affective Experiences, epidemiological parameters, Productivity Metrics,
+      accounting procedures, allocation assumptions, and standardization
+      denominators used to produce them.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: null
+
+  # ─── Module VI: Welfare Footprints — Expression and Notation ──────────────
+
+  - id: welfare_footprint_expression
+    term: Welfare Footprint Expression
+    status: active
+    module: module-VI
+    definition: >
+      The structured presentation of Cumulative Pain, Cumulative Pleasure,
+      or Cumulative Affect estimates in a form that identifies what was
+      measured, for whom, over what period or analytical unit, and relative
+      to which denominator.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: null
+
+  - id: notation_requirements
+    term: Notation Requirements
+    status: active
+    module: module-VI
+    definition: >
+      Formal labeling conventions used to make WFF estimates interpretable
+      and comparable. Every published WFF estimate should include an explicit
+      Scope Qualifier and identify the relevant unit of expression (episode,
+      Life-Phase, lifespan, average population member, population, year, unit
+      of product, or other decision-relevant denominator). Cumulative Affect
+      reports must state whether the estimate is Baseline or Attention-Adjusted.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: null
+
+  - id: disaggregation_requirements
+    term: Disaggregation Requirements
+    status: active
+    module: module-VI
+    definition: >
+      WFF outputs must preserve disaggregation by valence and intensity
+      category. Cumulative Pain remains disaggregated across Annoying,
+      Hurtful, Disabling, and Excruciating. Cumulative Pleasure remains
+      disaggregated across Satisfaction, Joy, Euphoria, and Bliss. Where
+      relevant, results should also remain disaggregated by Affective
+      Experience, Biological Consequence, Circumstance, Life-Fate, Life-Phase,
+      Target Population, population subgroup, geography, timeframe, and
+      denominator.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: null
+
+  - id: uncertainty_expression
+    term: Uncertainty Expression
+    status: active
+    module: module-VI
+    definition: >
+      The transparent representation of uncertainty in the final presentation
+      of WFF estimates. May use ranges, probability distributions, confidence
+      or credibility intervals, scenario-specific outputs, graphical uncertainty
+      bars, or accompanying explanatory notes. Should distinguish, where
+      possible, between natural variation, epistemic uncertainty, model
+      assumptions, and scenario-based uncertainty.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: >
+      Final outputs should not present false precision when the evidence
+      base does not support it.
+
+  - id: supporting_documentation
+    term: Supporting Documentation
+    status: active
+    module: module-VI
+    definition: >
+      The supporting materials that should accompany published or
+      decision-relevant WFF estimates, enabling them to be inspected,
+      reproduced, updated, or challenged. May include Pain-Tracks,
+      Pleasure-Tracks, prevalence estimates, occurrence estimates, Affective
+      Episode Rates, Productivity Metrics, evidence sources, parameter
+      ranges, assumptions, scenario definitions, and sensitivity analyses.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: null
+
+  - id: communication_formats
+    term: Communication Formats
+    status: active
+    module: module-VI
+    definition: >
+      The different levels of detail in which WFF results may be communicated
+      depending on audience and purpose, including technical reports,
+      regulatory submissions, certification materials, consumer-facing
+      summaries, dashboards, tables, or graphical representations such as
+      double bar charts of Cumulative Pain and Cumulative Pleasure.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: >
+      Simplified communication formats should not collapse Pain and Pleasure
+      into a single net score, obscure intensity categories, omit Scope
+      Qualifiers, or conceal uncertainty and analytical assumptions.
+
+  - id: cumulative_pain_episode
+    term: "Cumulative Pain [Episode]"
+    status: active
+    module: module-VI
+    definition: >
+      The total Cumulative Pain estimated for a single occurrence of an
+      Affective Experience, as described in the corresponding Pain-Track.
+    source_ids:
+      - wfi-technical-definitions
+    notes: >
+      A Scope Qualifier form of Cumulative Pain, not a separate conceptual
+      primitive. See the Scope Qualifier entry.
+
+  - id: cumulative_pain_life_phase
+    term: "Cumulative Pain [Life-Phase]"
+    status: active
+    module: module-VI
+    definition: >
+      The total Cumulative Pain accumulated by the average member of a
+      Life-Fate across a defined Life-Phase, summing across all Affective
+      Experiences within that phase.
+    source_ids:
+      - wfi-technical-definitions
+    notes: >
+      A Scope Qualifier form of Cumulative Pain, not a separate conceptual
+      primitive. See the Scope Qualifier entry.
+
+  - id: cumulative_pain_lifespan
+    term: "Cumulative Pain [Lifespan]"
+    status: active
+    module: module-VI
+    definition: >
+      The total Cumulative Pain accumulated by the average member of a
+      Life-Fate across their entire life, summing across all Life-Phases.
+    source_ids:
+      - wfi-technical-definitions
+    notes: >
+      A Scope Qualifier form of Cumulative Pain, not a separate conceptual
+      primitive. See the Scope Qualifier entry.
+
+  - id: cumulative_pain_per_unit
+    term: "Cumulative Pain [per unit of product]"
+    status: active
+    module: module-VI
+    definition: >
+      The total Cumulative Pain standardized per unit of output (e.g., per
+      kilogram of meat, per liter of milk, per egg), as calculated in
+      Module V.
+    source_ids:
+      - wfi-technical-definitions
+    notes: >
+      A Scope Qualifier form of Cumulative Pain, not a separate conceptual
+      primitive. See the Scope Qualifier entry and Welfare Footprint per
+      Unit of Product.
+
+  - id: cumulative_pleasure_episode
+    term: "Cumulative Pleasure [Episode]"
+    status: active
+    module: module-VI
+    definition: >
+      The total Cumulative Pleasure estimated for a single occurrence of a
+      positive Affective Experience, as described in the corresponding
+      Pleasure-Track.
+    source_ids:
+      - wfi-technical-definitions
+    notes: >
+      A Scope Qualifier form of Cumulative Pleasure, not a separate
+      conceptual primitive. See the Scope Qualifier entry.
+
+  - id: cumulative_pleasure_life_phase
+    term: "Cumulative Pleasure [Life-Phase]"
+    status: active
+    module: module-VI
+    definition: >
+      The total Cumulative Pleasure accumulated by the average member of a
+      Life-Fate across a defined Life-Phase, summing across all positive
+      Affective Experiences within that phase.
+    source_ids:
+      - wfi-technical-definitions
+    notes: >
+      A Scope Qualifier form of Cumulative Pleasure, not a separate
+      conceptual primitive. See the Scope Qualifier entry.
+
+  - id: cumulative_pleasure_lifespan
+    term: "Cumulative Pleasure [Lifespan]"
+    status: active
+    module: module-VI
+    definition: >
+      The total Cumulative Pleasure accumulated by the average member of a
+      Life-Fate across their entire life.
+    source_ids:
+      - wfi-technical-definitions
+    notes: >
+      A Scope Qualifier form of Cumulative Pleasure, not a separate
+      conceptual primitive. See the Scope Qualifier entry.
+
+  - id: cumulative_pleasure_per_unit
+    term: "Cumulative Pleasure [per unit of product]"
+    status: active
+    module: module-VI
+    definition: >
+      The total Cumulative Pleasure standardized per unit of output, as
+      calculated in Module V.
+    source_ids:
+      - wfi-technical-definitions
+    notes: >
+      A Scope Qualifier form of Cumulative Pleasure, not a separate
+      conceptual primitive. See the Scope Qualifier entry and Welfare
+      Footprint per Unit of Product.
+
+  # ─── Module Ψ: Interspecific Scaling ──────────────────────────────────────
+  #
+  # Module Ψ is provisional and under active development per
+  # canon/terminology.md §9. New Module Ψ terms introduced in the 2026-05-15
+  # canon are marked status: review-needed pending source-registry entries
+  # for the relevant development materials.
+
+  - id: species_internal_intensity_categories
+    term: Species-Internal Intensity Categories
+    status: active
+    module: module-psi
+    definition: >
+      The unqualified intensity terms used within WFF analyses (Annoying,
+      Hurtful, Disabling, Excruciating; Satisfaction, Joy, Euphoria, Bliss),
+      referring by default to categories classifying time spent in Affective
+      States within the species, taxon, or analytical population under
+      assessment. Used in all intraspecific analyses.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: >
+      Do not automatically imply equivalence with the same named category
+      in humans or in any other species.
+
+  - id: human_anchored_reference_categories
+    term: Human-Anchored Reference Categories
+    status: active
+    module: module-psi
+    definition: >
+      Explicitly marked intensity categories identified with the suffix (h),
+      used only when making interspecific comparisons. For negative affect:
+      Annoying(h), Hurtful(h), Disabling(h), Excruciating(h). For positive
+      affect: Satisfaction(h), Joy(h), Euphoria(h), Bliss(h). Serve as
+      absolute calibration points; not asserted as universal ceilings.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: >
+      Do not replace species-internal WFF categories and do not modify
+      within-species Welfare Footprint calculations. Operate only at the
+      interspecific interface.
+
+  - id: hedonic_capacity
+    term: Hedonic Capacity
+    status: review-needed
+    module: module-psi
+    definition: >
+      The maximum intensity of affective experience a species can plausibly
+      reach. Plausibly variable across taxa, but its nature and magnitude
+      remain a major open question in comparative biology and affective
+      neuroscience.
+    source_ids:
+      - wfi-technical-definitions
+    notes: >
+      The 2026-05-15 canon introduces "Affective Ceiling" (see
+      affective_ceiling and affective_ceiling_analysis) as the active term
+      for the conceptual role formerly carried by Hedonic Capacity in
+      Module Ψ. This entry is retained as review-needed pending an explicit
+      decision by Wladimir/Cynthia on whether Hedonic Capacity should be
+      (a) retained as a related historical / methodological term distinct
+      from Affective Ceiling, (b) explicitly deprecated in favor of
+      Affective Ceiling (in which case it should move to
+      glossary/deprecated_terms.yaml), or (c) reframed in some other way.
+      Not added to deprecated_terms.yaml in this PR pending that decision.
+
+  - id: affective_ceiling
+    term: Affective Ceiling
+    status: review-needed
+    module: module-psi
+    definition: >
+      The maximum intensity of affective experience that a species can
+      plausibly reach, given current evidence about its sentience, neural
+      architecture, behavioral complexity, physiological regulation,
+      motivational systems, ecological pressures, and evolutionary history.
+      A tentative and revisable inference, not a direct measurement. Used to
+      make explicit the upper bound of affective intensity an assessment is
+      willing to attribute to a species for interspecific comparison.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: >
+      Should be specified by valence when relevant (a species may have one
+      inferred ceiling for negative affect and another for positive affect).
+      Should distinguish sensitivity from capacity: strong reactivity to
+      noxious stimuli does not by itself establish a high maximum ceiling.
+      Status review-needed pending a source-registry entry for the relevant
+      Module Ψ development materials. See canon/terminology.md §9.
+
+  - id: affective_ceiling_analysis
+    term: Affective Ceiling Analysis
+    status: review-needed
+    module: module-psi
+    definition: >
+      A structured assessment of a species' maximum plausible affective
+      intensity relative to explicit reference categories. Begins with a
+      sentience plausibility assessment, then evaluates evidence relevant
+      to affective capacity (neural integration, behavioral flexibility,
+      motivational trade-offs, pharmacological modulation, physiological
+      regulation, ecological function, evolutionary plausibility).
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: >
+      May be applied separately to negative and positive affect. When both
+      are considered, the analysis should state whether it is assessing a
+      Pain Ceiling, a Pleasure Ceiling, or both. Should produce a bounded
+      provisional conclusion rather than a precise scalar value whenever
+      evidence is limited or contested. Purpose: expose interspecific
+      assumptions, not settle sentience debates, compute moral weights, or
+      rank species. Status review-needed pending source-registry entry.
+
+  - id: interspecific_scaling_correction
+    term: Interspecific Scaling Correction
+    status: active
+    module: module-psi
+    definition: >
+      An optional post-quantification adjustment that maps species-internal
+      intensity categories to explicit interspecific reference levels.
+      Should only be applied when the assessment requires cross-species
+      comparison and when the mapping assumptions have been stated, justified,
+      and preserved in the documentation.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: >
+      All corrections must be reported and treated as provisional pending
+      stronger evidence.
+
+  - id: time_mapping_assumption
+    term: Time-Mapping Assumption
+    status: review-needed
+    module: module-psi
+    definition: >
+      An explicit assumption about whether a unit of clock time corresponds
+      to the same amount of subjectively experienced duration across species.
+      Relevant only after the assessment has considered whether comparable
+      affective intensities are plausible.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: >
+      Time-mapping should not be used to compensate for unsupported intensity
+      assumptions: if a species is not plausibly capable of reaching a given
+      human-anchored intensity, differences in subjective time perception
+      cannot by themselves justify assigning that intensity. Status
+      review-needed pending source-registry entry for Module Ψ development
+      materials.
+
+  - id: scaling_transparency_requirement
+    term: Scaling Transparency Requirement
+    status: review-needed
+    module: module-psi
+    definition: >
+      The requirement that any interspecific comparison using Module Ψ must
+      clearly distinguish the original species-internal WFF estimate, the
+      human-anchored or other interspecific reference categories used, the
+      Affective Ceiling assumptions, any Time-Mapping Assumptions, the
+      evidence and reasoning supporting those assumptions, and the
+      uncertainty or contestability of the scaling procedure.
+    source_ids:
+      - wfi-technical-definitions
+      - wff-methodological-foundations-2025
+    notes: >
+      Module Ψ outputs should be treated as provisional and open to revision.
+      Status review-needed pending source-registry entry for Module Ψ
+      development materials.

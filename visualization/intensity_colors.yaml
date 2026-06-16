@@ -1,0 +1,48 @@
+# WFF canonical intensity colors
+# Source of truth: canon/intensity_categories_pain.md, canon/intensity_categories_pleasure.md
+# This file is a derived, machine-readable mirror. The canon Markdown tables remain authoritative.
+version: 1
+
+pain:
+  gradient: warm
+  direction: lower_to_higher_intensity
+  order:
+    - Annoying
+    - Hurtful
+    - Disabling
+    - Excruciating
+  categories:
+    Annoying:
+      hex: "#939238"
+      note: muted olive/yellow
+    Hurtful:
+      hex: "#B8923B"
+      note: ochre / amber-brown
+    Disabling:
+      hex: "#B53F2F"
+      note: burnt red
+    Excruciating:
+      hex: "#7A3A5F"
+      note: dark plum / deep suffering tone
+
+pleasure:
+  gradient: cold
+  direction: lower_to_higher_intensity
+  order:
+    - Satisfaction
+    - Joy
+    - Euphoria
+    - Bliss
+  categories:
+    Satisfaction:
+      hex: "#ADD8E6"
+      note: light blue
+    Joy:
+      hex: "#40E0D0"
+      note: turquoise
+    Euphoria:
+      hex: "#008080"
+      note: teal
+    Bliss:
+      hex: "#483D8B"
+      note: deep indigo

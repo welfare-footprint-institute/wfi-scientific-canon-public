@@ -1,0 +1,92 @@
+schema_version: "0.1"
+repository: wfi-scientific-canon-public
+organization: welfare-footprint-institute
+url: https://github.com/welfare-footprint-institute/wfi-scientific-canon-public
+description: >
+  Curated public mirror of the Welfare Footprint Institute (WFI) scientific
+  canon. It presents the WFF methodology, terminology, module definitions,
+  evidence standards, source registry, and quantitative welfare constructs
+  for public reading, citation, teaching, and external review.
+
+repository_type: public-mirror
+purpose: >
+  Public publication and teaching mirror of the WFI scientific canon. This is
+  not the internal working repository: the internal repository has its own
+  development history and review workflow. This mirror is published with a
+  clean public history rather than the internal working repository's full
+  history, and it may lag behind internal development. Treat it as the current
+  public teaching and reference snapshot of the canon.
+
+source_snapshot:
+  commit: "178f65dd359284bb4138bc0b7e69608001c22f17"
+  note: >
+    Content reflects the WFI scientific canon as of this source snapshot
+    commit. The public mirror is rebuilt from curated current files and does
+    not reproduce the internal repository's commit history.
+
+canonical_chain:
+  - Circumstances
+  - Biological Consequences
+  - Affective Experiences
+  - Welfare Metrics
+
+primary_welfare_constructs:
+  - Cumulative Pain        # disaggregated by intensity category
+  - Cumulative Pleasure    # disaggregated by intensity category
+
+modules:
+  - id: "I"
+    name: Zootechnical Description
+    file: modules/i_zootechnical_description.md
+
+  - id: "II"
+    name: Veterinary Inventory
+    file: modules/ii_veterinary_inventory.md
+
+  - id: "III"
+    name: Affective Quantification
+    file: modules/iii_affective_quantification.md
+
+  - id: "IV"
+    name: Epidemiological Review
+    file: modules/iv_epidemiological_review.md
+
+  - id: "V"
+    name: Econometric Calculation
+    deprecated_name: Aggregation and Standardization
+    file: modules/v_econometric_calculation.md
+
+  - id: "VI"
+    name: "Welfare Footprints: Expression and Notation"
+    file: modules/vi_expression_notation.md
+
+  - id: "Ψ"
+    name: Interspecific Scaling / Interspecific Affect
+    file: modules/psi_interspecific_scaling.md
+
+primary_citation:
+  authors: "Alonso, W. J., & Schuck-Paim, C."
+  year: 2025
+  title: >
+    Welfare Footprint Framework: Methodological Foundations and
+    Quantitative Assessment Guidelines
+  publisher: "Center for Welfare Metrics (São Paulo)"
+  doi: "10.17605/osf.io/94bxs"
+  url: "https://doi.org/10.17605/osf.io/94bxs"
+  status: "preprint-under-review — cite OSF preprint until Animal Sentience version published"
+
+sources:
+  registry: sources/source_registry.yaml
+  citation_policy: sources/citation_policy.md
+
+scope_exclusions:
+  - Atlas
+  - WFKG
+  - schemas and validators
+  - MCP servers
+  - agents
+  - dashboards
+  - product code
+  - content studio
+  - ops assistant infrastructure
+  - workshop materials

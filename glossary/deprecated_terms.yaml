@@ -1,0 +1,37 @@
+# Deprecated Terms
+# Terms that have been superseded in WFF and must not be used in new canon.
+# For the change history of each term, see glossary/term_change_log.md
+#
+# Status: skeleton — requires scientific review by Wladimir J. Alonso / Cynthia
+# Last reviewed: [PLACEHOLDER]
+#
+# Format per entry:
+#   deprecated:       the term no longer in use
+#   replacement:      the current preferred term
+#   deprecated_on:    date of deprecation (YYYY-MM-DD)
+#   scope:            what exactly is deprecated (tool name, module name, etc.)
+#   note:             guidance on when / how historical references may still appear
+
+deprecated_terms:
+
+  - deprecated: Pain-Track GPT
+    replacement: Hedonic-Track GPT
+    deprecated_on: "[PLACEHOLDER — confirm exact date with Wladimir/Cynthia]"
+    scope: "Specific Custom GPT / agent tool name only"
+    note: >
+      Use Hedonic-Track GPT for the current broader GPT/tool that covers both
+      Pain and Pleasure analyses. Pain-Track remains a valid and important WFF
+      term when referring to the Pain-Track method, Pain-Track notation,
+      Pain-Track App, historical materials, or Pain-specific workflows. Do not
+      mechanically replace Pain-Track outside the specific GPT/tool-name context.
+
+  - deprecated: Aggregation and Standardization
+    replacement: Econometric Calculation
+    deprecated_on: "[PLACEHOLDER — confirm exact date with Wladimir/Cynthia]"
+    scope: "Module V name"
+    note: >
+      Use Econometric Calculation for Module V in current and future WFI
+      work. Aggregation and Standardization may appear in earlier repository
+      scaffolding or drafts; when encountered it refers to what is now
+      Module V: Econometric Calculation. Do not use Aggregation and
+      Standardization in new canon or documentation.

@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+title: WFI Scientific Canon
+message: >-
+  This repository holds the scientific canon of the Welfare Footprint
+  Framework (WFF). Until the peer-reviewed journal version is published,
+  please cite the OSF preprint listed below.
+type: dataset
+authors:
+  - family-names: Alonso
+    given-names: Wladimir J.
+    affiliation: Welfare Footprint Institute
+  - family-names: Schuck-Paim
+    given-names: Cynthia
+    affiliation: Welfare Footprint Institute
+repository-code: "https://github.com/welfare-footprint-institute/wfi-scientific-canon-public"
+license: CC-BY-4.0
+preferred-citation:
+  type: article
+  title: >-
+    Welfare Footprint Framework: Methodological Foundations and
+    Quantitative Assessment Guidelines
+  authors:
+    - family-names: Alonso
+      given-names: Wladimir J.
+    - family-names: Schuck-Paim
+      given-names: Cynthia
+  year: 2025
+  publisher:
+    name: Center for Welfare Metrics
+  doi: 10.17605/osf.io/94bxs
+  url: "https://doi.org/10.17605/osf.io/94bxs"
+  notes: >-
+    Preprint under review at Animal Sentience. Cite this OSF preprint until
+    the journal version is published. See sources/citation_policy.md.

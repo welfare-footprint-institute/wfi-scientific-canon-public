@@ -1,0 +1,22 @@
+# CODEOWNERS — wfi-scientific-canon-public
+#
+# Each line defines who must review changes to that path.
+# Assignments reflect scientific and editorial authority within WFI.
+#
+# NOTE: Add Cynthia's GitHub handle when available.
+
+# Default: all files require review by the repository maintainer
+* @wladuk
+
+# Canon files require explicit human scientific review
+/canon/         @wladuk
+/modules/       @wladuk
+/glossary/      @wladuk
+
+# Review and open questions — maintainer oversight
+/review/        @wladuk
+
+# Infrastructure files — maintainer only
+/.gitattributes @wladuk
+/manifest.yaml  @wladuk
+/CODEOWNERS     @wladuk
