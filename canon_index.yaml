@@ -1,0 +1,447 @@
+schema_version: "0.1"
+index_id: wfi-scientific-canon-public-index
+title: WFI Scientific Canon Public Index
+description: >
+  Machine-readable retrieval index for AI connectors and MCP-compatible clients.
+  This file contains metadata only. It does not replace the canon files and does
+  not duplicate their scientific content. Each entry's status field reflects the
+  status declared inside that file (for example "Draft for scientific review" or
+  "Scaffold for scientific review") and must be preserved so that AI clients do
+  not present draft or scaffold material as settled canon.
+
+source_repository:
+  organization: welfare-footprint-institute
+  repository: wfi-scientific-canon-public
+  branch: main
+  raw_base_url: https://raw.githubusercontent.com/welfare-footprint-institute/wfi-scientific-canon-public/main
+
+access_policy:
+  default: read_only
+  allowed_operations:
+    - list_index
+    - read_indexed_entries
+    - read_indexed_bundles
+    - search_index_metadata
+  forbidden_operations:
+    - write
+    - create_issue
+    - create_pull_request
+    - modify_repository
+    - fetch_unindexed_paths
+    - fetch_arbitrary_urls
+    - access_private_repositories
+
+# NOTE ON REVIEW/GOVERNANCE FILES
+# The repository also contains review/open_questions.md, review/source_conflicts.md,
+# review/follow_up_items.md, and review/unresolved_methodological_issues.md. These
+# are intentionally NOT indexed here. They track open, unresolved, and in-flight
+# review material and should not be retrieved by default AI clients as if they were
+# canon. If they are ever exposed to connectors in the future, they must be marked
+# exposure_level: public_review_governance and kept out of default bundles.
+
+entries:
+  - id: readme
+    path: README.md
+    title: Repository README
+    role: orientation
+    status: current_public
+    exposure_level: public_default
+    ai_accessible: true
+    mime_type: text/markdown
+    wff_modules: []
+    tags: [orientation, overview, public_mirror]
+    recommended_use: >
+      Read first to understand what this public mirror is, what it contains, and
+      how it relates to the internal working canon.
+
+  - id: ai_use
+    path: AI_USE.md
+    title: AI Use Rules
+    role: ai_use_rules
+    status: current_public
+    exposure_level: public_default
+    ai_accessible: true
+    mime_type: text/markdown
+    wff_modules: []
+    tags: [ai_use, rules, guardrails, orientation]
+    recommended_use: >
+      Read before generating or interpreting WFF content. Defines how AI systems
+      may and may not use the canon, including the rule not to collapse Pain and
+      Pleasure into a single score.
+
+  - id: canon_map
+    path: CANON_MAP.md
+    title: Canon Map
+    role: orientation
+    status: current_public
+    exposure_level: public_default
+    ai_accessible: true
+    mime_type: text/markdown
+    wff_modules: []
+    tags: [orientation, map, navigation]
+    recommended_use: >
+      Use as a navigation map of the canon's structure and the relationships
+      between files before retrieving specific entries.
+
+  - id: readme_for_agents
+    path: README_FOR_AGENTS.md
+    title: README for Agents
+    role: orientation
+    status: current_public
+    exposure_level: public_default
+    ai_accessible: true
+    mime_type: text/markdown
+    wff_modules: []
+    tags: [orientation, agents, ai_use]
+    recommended_use: >
+      Read to understand how automated agents and AI clients are expected to
+      consume the canon responsibly.
+
+  - id: manifest
+    path: manifest.yaml
+    title: Repository Manifest
+    role: manifest
+    status: current_public
+    exposure_level: public_default
+    ai_accessible: true
+    mime_type: text/yaml
+    wff_modules: []
+    tags: [manifest, metadata, structure]
+    recommended_use: >
+      Read for the authoritative public-mirror framing, the canonical chain,
+      the module list, and the primary citation. The manifest is the existing
+      repository descriptor; this index is the AI-connector discovery layer.
+
+  - id: citation
+    path: CITATION.cff
+    title: Citation Metadata
+    role: citation
+    status: reference
+    exposure_level: public_default
+    ai_accessible: true
+    mime_type: text/yaml
+    wff_modules: []
+    tags: [citation, metadata, reference]
+    recommended_use: >
+      Use to cite the Welfare Footprint Framework correctly. Defer to the
+      citation policy for citation standards.
+
+  - id: license
+    path: LICENSE.md
+    title: License
+    role: license
+    status: reference
+    exposure_level: public_default
+    ai_accessible: true
+    mime_type: text/markdown
+    wff_modules: []
+    tags: [license, reference, terms]
+    recommended_use: >
+      Read to understand the terms under which this public canon may be used and
+      redistributed.
+
+  - id: canon_principles
+    path: canon/principles.md
+    title: Canon Core Principles
+    role: canon_principles
+    status: draft_for_scientific_review
+    exposure_level: public_default
+    ai_accessible: true
+    mime_type: text/markdown
+    wff_modules: []
+    tags: [principles, methodology, canon]
+    recommended_use: >
+      Read to understand the core WFF principles. Status is draft for scientific
+      review; present as draft canon, not settled doctrine.
+
+  - id: terminology
+    path: canon/terminology.md
+    title: Core Terminology
+    role: terminology
+    status: draft_for_scientific_review
+    exposure_level: public_default
+    ai_accessible: true
+    mime_type: text/markdown
+    wff_modules: []
+    tags: [terminology, definitions, canon]
+    recommended_use: >
+      Read to align on canonical WFF terminology for human readers. Pair with the
+      machine-readable wff_terms and deprecated_terms glossaries.
+
+  - id: pain_intensity_categories
+    path: canon/intensity_categories_pain.md
+    title: Pain Intensity Categories
+    role: intensity_categories
+    status: draft_for_scientific_review
+    exposure_level: public_default
+    ai_accessible: true
+    mime_type: text/markdown
+    wff_modules: []
+    tags: [pain, intensity_categories, affective_states, methodology]
+    recommended_use: >
+      Read for the canonical Pain intensity categories. Keep Pain categories
+      distinct from Pleasure categories; do not merge them into a single scale.
+
+  - id: pleasure_intensity_categories
+    path: canon/intensity_categories_pleasure.md
+    title: Pleasure Intensity Categories
+    role: intensity_categories
+    status: draft_for_scientific_review
+    exposure_level: public_default
+    ai_accessible: true
+    mime_type: text/markdown
+    wff_modules: []
+    tags: [pleasure, intensity_categories, affective_states, methodology]
+    recommended_use: >
+      Read for the canonical Pleasure intensity categories. Keep Pleasure
+      categories distinct from Pain categories; do not merge them into a single
+      scale.
+
+  - id: visualization_conventions
+    path: canon/visualization_conventions.md
+    title: Visualization Conventions
+    role: visualization
+    status: draft_for_scientific_review
+    exposure_level: public_default
+    ai_accessible: true
+    mime_type: text/markdown
+    wff_modules: []
+    tags: [visualization, conventions, presentation]
+    recommended_use: >
+      Read before rendering or describing WFF visualizations to follow the
+      canonical conventions for representing intensity and affective states.
+
+  - id: wff_terms
+    path: glossary/wff_terms.yaml
+    title: WFF Canonical Terms (machine-readable)
+    role: glossary
+    status: draft_for_scientific_review
+    exposure_level: public_default
+    ai_accessible: true
+    mime_type: text/yaml
+    wff_modules: []
+    tags: [glossary, terminology, machine_readable]
+    recommended_use: >
+      Use as the machine-readable source of canonical WFF terms. Human-readable
+      context lives in the terminology entry.
+
+  - id: deprecated_terms
+    path: glossary/deprecated_terms.yaml
+    title: Deprecated Terms (machine-readable)
+    role: glossary
+    status: scaffold_for_scientific_review
+    exposure_level: public_default
+    ai_accessible: true
+    mime_type: text/yaml
+    wff_modules: []
+    tags: [glossary, deprecated, terminology, machine_readable]
+    recommended_use: >
+      Use to detect superseded terms that must not be used in new canon and to
+      find their preferred replacements. Status is skeleton/scaffold pending
+      scientific review.
+
+  - id: module_i
+    path: modules/i_zootechnical_description.md
+    title: "Module I: Zootechnical Description"
+    role: module
+    status: scaffold_for_scientific_review
+    exposure_level: public_default
+    ai_accessible: true
+    mime_type: text/markdown
+    wff_modules: ["I"]
+    tags: [module, circumstances, zootechnical]
+    recommended_use: >
+      Read for the Module I specification (Circumstances). Status is scaffold for
+      scientific review; treat as a scaffold, not finalized methodology.
+
+  - id: module_ii
+    path: modules/ii_veterinary_inventory.md
+    title: "Module II: Veterinary Inventory"
+    role: module
+    status: scaffold_for_scientific_review
+    exposure_level: public_default
+    ai_accessible: true
+    mime_type: text/markdown
+    wff_modules: ["II"]
+    tags: [module, biological_consequences, veterinary]
+    recommended_use: >
+      Read for the Module II specification (Biological Consequences). Status is
+      scaffold for scientific review.
+
+  - id: module_iii
+    path: modules/iii_affective_quantification.md
+    title: "Module III: Affective Quantification"
+    role: module
+    status: scaffold_for_scientific_review
+    exposure_level: public_default
+    ai_accessible: true
+    mime_type: text/markdown
+    wff_modules: ["III"]
+    tags: [module, affective_experiences, quantification]
+    recommended_use: >
+      Read for the Module III specification (Affective Experiences). This is the
+      step where the WFF chain contacts the morally relevant quantity. Status is
+      scaffold for scientific review.
+
+  - id: module_iv
+    path: modules/iv_epidemiological_review.md
+    title: "Module IV: Epidemiological Review"
+    role: module
+    status: scaffold_for_scientific_review
+    exposure_level: public_default
+    ai_accessible: true
+    mime_type: text/markdown
+    wff_modules: ["IV"]
+    tags: [module, epidemiology, review]
+    recommended_use: >
+      Read for the Module IV specification (Epidemiological Review). Status is
+      scaffold for scientific review.
+
+  - id: module_v
+    path: modules/v_econometric_calculation.md
+    title: "Module V: Econometric Calculation"
+    role: module
+    status: scaffold_for_scientific_review
+    exposure_level: public_default
+    ai_accessible: true
+    mime_type: text/markdown
+    wff_modules: ["V"]
+    tags: [module, econometric, calculation]
+    recommended_use: >
+      Read for the Module V specification (Econometric Calculation; formerly
+      "Aggregation and Standardization"). Status is scaffold for scientific
+      review.
+
+  - id: module_vi
+    path: modules/vi_expression_notation.md
+    title: "Module VI: Welfare Footprints — Expression and Notation"
+    role: module
+    status: scaffold_for_scientific_review
+    exposure_level: public_default
+    ai_accessible: true
+    mime_type: text/markdown
+    wff_modules: ["VI"]
+    tags: [module, expression, notation]
+    recommended_use: >
+      Read for the Module VI specification (Expression and Notation of Welfare
+      Footprints). Status is scaffold for scientific review.
+
+  - id: module_psi
+    path: modules/psi_interspecific_scaling.md
+    title: "Module Ψ: Interspecific Scaling / Interspecific Affect"
+    role: module
+    status: scaffold_for_scientific_review
+    exposure_level: public_default
+    ai_accessible: true
+    mime_type: text/markdown
+    wff_modules: ["Ψ"]
+    tags: [module, interspecific_scaling, psi, high_uncertainty]
+    recommended_use: >
+      Read for the Module Ψ specification (Interspecific Scaling). Status is an
+      open scaffold with high uncertainty requiring extensive scientific review;
+      present its claims with strong uncertainty caveats.
+
+  - id: source_registry
+    path: sources/source_registry.yaml
+    title: Source Registry (machine-readable)
+    role: source_governance
+    status: reference
+    exposure_level: public_default
+    ai_accessible: true
+    mime_type: text/yaml
+    wff_modules: []
+    tags: [sources, registry, governance, machine_readable]
+    recommended_use: >
+      Use to look up the authoritative sources that inform WFF canon. Entries in
+      the registry do not automatically become canon.
+
+  - id: citation_policy
+    path: sources/citation_policy.md
+    title: Citation Policy
+    role: source_governance
+    status: current_public
+    exposure_level: public_default
+    ai_accessible: true
+    mime_type: text/markdown
+    wff_modules: []
+    tags: [citation, policy, governance]
+    recommended_use: >
+      Read for the citation standards that apply to WFF canon outputs and any
+      materials that reference the framework.
+
+  - id: resolved_methodological_decisions
+    path: review/resolved_methodological_decisions.md
+    title: Resolved Methodological Decisions
+    role: resolved_review
+    status: resolved_review_record
+    exposure_level: public_optional
+    ai_accessible: true
+    mime_type: text/markdown
+    wff_modules: []
+    tags: [review, resolved, methodology, governance]
+    recommended_use: >
+      Read to see WFF methodological questions that have been explicitly resolved.
+      Useful to clarify interpretation of current canon files. This is a resolved
+      review record, not open review material, and is not part of the core
+      default bundles.
+
+bundles:
+  - id: core_orientation
+    title: Core orientation
+    description: Basic repository orientation and AI-use rules.
+    entry_ids:
+      - readme
+      - ai_use
+      - canon_map
+      - readme_for_agents
+      - manifest
+
+  - id: core_methodology
+    title: Core WFF methodology
+    description: Core principles, terminology, intensity categories, and module specifications.
+    entry_ids:
+      - canon_principles
+      - terminology
+      - pain_intensity_categories
+      - pleasure_intensity_categories
+      - visualization_conventions
+      - module_i
+      - module_ii
+      - module_iii
+      - module_iv
+      - module_v
+      - module_vi
+      - module_psi
+
+  - id: terminology_and_deprecations
+    title: Terminology and deprecated terms
+    description: Core terminology plus machine-readable deprecated-term guidance.
+    entry_ids:
+      - terminology
+      - wff_terms
+      - deprecated_terms
+
+  - id: modules
+    title: WFF modules
+    description: Module files for the WFF analytical workflow.
+    entry_ids:
+      - module_i
+      - module_ii
+      - module_iii
+      - module_iv
+      - module_v
+      - module_vi
+      - module_psi
+
+  - id: source_governance
+    title: Source and citation governance
+    description: Source registry and citation policy.
+    entry_ids:
+      - source_registry
+      - citation_policy
+
+  - id: resolved_methodology
+    title: Resolved methodological decisions
+    description: Resolved review decisions that may clarify interpretation of current canon files.
+    entry_ids:
+      - resolved_methodological_decisions

@@ -8,6 +8,7 @@ This changelog starts from the first curated public mirror snapshot and does not
 
 - Pending public mirror initialization.
 - Synced public-safe review-status metadata cleanup from the private canon source snapshot (`d0ea621db2f3ef9b4db82c91ad4fade780224f4b`).
+- Added a machine-readable canon index for read-only AI connector discovery.
 
 ## [0.1.0-public-snapshot] — 2026-06-16
 
