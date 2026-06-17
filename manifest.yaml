@@ -8,6 +8,8 @@ description: >
   evidence standards, source registry, and quantitative welfare constructs
   for public reading, citation, teaching, and external review.
 
+ai_connector_index: canon_index.yaml
+
 repository_type: public-mirror
 purpose: >
   Public publication and teaching mirror of the WFI scientific canon. This is
