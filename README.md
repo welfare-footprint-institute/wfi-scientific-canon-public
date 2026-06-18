@@ -39,6 +39,9 @@ repository, which has its own development history and scientific review
 workflow. This mirror may lag behind internal development and should be treated
 as the current public teaching and reference snapshot of the canon.
 
+For the explicit mirroring rationale and pending sync-policy definition, see
+[`MIRROR_POLICY.md`](MIRROR_POLICY.md).
+
 ---
 
 ## The WFF Chain
