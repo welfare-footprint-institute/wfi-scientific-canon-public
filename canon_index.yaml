@@ -197,6 +197,51 @@ entries:
       categories distinct from Pain categories; do not merge them into a single
       scale.
 
+  - id: evidence_standards
+    path: canon/evidence_standards.md
+    title: Evidence Standards
+    role: evidence_standards
+    status: scaffold_for_scientific_review
+    exposure_level: public_default
+    ai_accessible: true
+    mime_type: text/markdown
+    wff_modules: ["III", "IV", "Ψ"]
+    tags: [evidence, standards, methodology, review]
+    recommended_use: >
+      Read for provisional evidence-evaluation guidance. This file is a skeleton
+      requiring scientific review; do not present its provisional hierarchy or
+      placeholders as settled standards.
+
+  - id: uncertainty_principles
+    path: canon/uncertainty_principles.md
+    title: Uncertainty Principles
+    role: uncertainty
+    status: scaffold_for_scientific_review
+    exposure_level: public_default
+    ai_accessible: true
+    mime_type: text/markdown
+    wff_modules: []
+    tags: [uncertainty, assumptions, methodology, evidence]
+    recommended_use: >
+      Read for current uncertainty-handling principles. This file is a skeleton
+      requiring scientific review; preserve its uncertainty distinctions and do
+      not treat placeholder protocols as finalized.
+
+  - id: scientific_lane
+    path: canon/scientific_lane.md
+    title: WFI Scientific Lane
+    role: scientific_scope
+    status: scaffold_for_scientific_review
+    exposure_level: public_default
+    ai_accessible: true
+    mime_type: text/markdown
+    wff_modules: []
+    tags: [scientific_lane, scope, communication, governance]
+    recommended_use: >
+      Read for the provisional boundary between WFI scientific outputs and
+      institutional moral or policy conclusions. This file is a skeleton requiring
+      scientific review.
+
   - id: visualization_conventions
     path: canon/visualization_conventions.md
     title: Visualization Conventions
@@ -210,6 +255,20 @@ entries:
     recommended_use: >
       Read before rendering or describing WFF visualizations to follow the
       canonical conventions for representing intensity and affective states.
+
+  - id: intensity_colors
+    path: visualization/intensity_colors.yaml
+    title: WFF Intensity Colors (machine-readable)
+    role: visualization_palette
+    status: reference
+    exposure_level: public_default
+    ai_accessible: true
+    mime_type: text/yaml
+    wff_modules: []
+    tags: [visualization, colors, intensity_categories, machine_readable]
+    recommended_use: >
+      Use as the derived machine-readable palette for WFF visualizations. The
+      human-readable canon tables remain authoritative.
 
   - id: wff_terms
     path: glossary/wff_terms.yaml
@@ -398,13 +457,17 @@ bundles:
 
   - id: core_methodology
     title: Core WFF methodology
-    description: Core principles, terminology, intensity categories, and module specifications.
+    description: Core principles, evidence and uncertainty guidance, terminology, intensity categories, visualization conventions, and module specifications.
     entry_ids:
       - canon_principles
       - terminology
       - pain_intensity_categories
       - pleasure_intensity_categories
+      - evidence_standards
+      - uncertainty_principles
+      - scientific_lane
       - visualization_conventions
+      - intensity_colors
       - module_i
       - module_ii
       - module_iii
