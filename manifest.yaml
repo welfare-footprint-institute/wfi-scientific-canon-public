@@ -1,23 +1,42 @@
-schema_version: "0.1"
+schema_version: "0.2"
 repository: wfi-scientific-canon-public
 organization: welfare-footprint-institute
 url: https://github.com/welfare-footprint-institute/wfi-scientific-canon-public
 description: >
-  Curated public mirror of the Welfare Footprint Institute (WFI) scientific
-  canon. It presents the WFF methodology, terminology, module definitions,
-  evidence standards, source registry, and quantitative welfare constructs
-  for public reading, citation, teaching, and external review.
+  Curated public mirror of the Welfare Footprint Institute scientific canon.
+  It presents the current public representation of WFF methodology,
+  terminology, module descriptions, source relationships, and review status.
+  It is not the ultimate scientific authority for the WFF.
 
 ai_connector_index: canon_index.yaml
-
 repository_type: public-mirror
 purpose: >
-  Public publication and teaching mirror of the WFI scientific canon. This is
-  not the internal working repository: the internal repository has its own
-  development history and review workflow. This mirror is published with a
-  clean public history rather than the internal working repository's full
-  history, and it may lag behind internal development. Treat it as the current
-  public teaching and reference snapshot of the canon.
+  Public teaching, citation, review, and retrieval mirror of the internal WFI
+  scientific canon. The primary WFF methodological paper and any formally
+  adopted amendments remain scientifically superior to both the private and
+  public repositories. This mirror may lag internal development.
+
+scientific_authority:
+  primary_source:
+    id: wff-methodological-foundations-2025
+    file: sources/wff_scientific_authority.md
+    citation_policy: sources/citation_policy.md
+  amendment_rule: joint_approval_required
+  scientific_authorities:
+    - Wladimir J. Alonso
+    - Cynthia Schuck-Paim
+  rule: >
+    Foundational WFF scientific content may be amended only through an explicit,
+    controlled scientific record jointly approved by Wladimir J. Alonso and
+    Cynthia Schuck-Paim. Public Issues and Pull Requests do not themselves
+    create or revise WFF scientific authority.
+
+repository_role:
+  type: curated-public-mirror
+  immediate_source: wfi-scientific-canon
+  does_not_authorize:
+    - Independent revision of WFF scientific content
+    - Public propagation of substantive changes before internal approval
 
 source_snapshot:
   commit: "d0ea621db2f3ef9b4db82c91ad4fade780224f4b"
@@ -33,8 +52,8 @@ canonical_chain:
   - Welfare Metrics
 
 primary_welfare_constructs:
-  - Cumulative Pain        # disaggregated by intensity category
-  - Cumulative Pleasure    # disaggregated by intensity category
+  - Cumulative Pain
+  - Cumulative Pleasure
 
 modules:
   - id: "I"
@@ -76,10 +95,12 @@ primary_citation:
   doi: "10.17605/osf.io/94bxs"
   url: "https://doi.org/10.17605/osf.io/94bxs"
   status: "preprint-under-review — cite OSF preprint until Animal Sentience version published"
+  authority: ultimate-current-scientific-source
 
 sources:
   registry: sources/source_registry.yaml
   citation_policy: sources/citation_policy.md
+  scientific_authority: sources/wff_scientific_authority.md
 
 scope_exclusions:
   - Atlas
