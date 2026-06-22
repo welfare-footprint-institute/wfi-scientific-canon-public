@@ -16,8 +16,13 @@ commitments, module specifications, and terminology that underpin all WFI
 quantitative welfare work. Some entries remain draft, provisional, or pending
 scientific review.
 
-It is a **reference archive**, not a software product. Changes to canonical
-content require explicit human scientific review.
+It is a **reference archive**, not a software product. Routine public-repository
+contributions should improve the accuracy, clarity, provenance, and consistency
+with which the established WFF is represented. Substantive proposals to revise
+the framework's underlying concepts or methodological architecture are
+exceptional and are not decided through ordinary public Issues or Pull Requests.
+They require a separate scientific process and an approved internal canon
+revision before this public mirror is updated.
 
 ---
 
@@ -108,17 +113,25 @@ wfi-scientific-canon-public/
 
 ## Contributing
 
-- All changes to `canon/` and `modules/` require explicit human approval.
+- Ordinary contributions should correct errors, ambiguity, provenance problems,
+  or departures from the established WFF.
+- Changes to `canon/` and `modules/` require explicit review for fidelity to the
+  approved internal canon.
+- Substantive proposals to change WFF concepts, the analytical chain, module
+  architecture, intensity definitions, or methodological workflow require a
+  separate higher-level scientific process. They are not settled by an Issue or
+  ordinary Pull Request in this public mirror.
 - Use `draft/<topic>` branches for work in progress.
-- Use `review/<topic>` branches for content under peer review.
+- Use `review/<topic>` branches for content under formal review.
 - Do not treat placeholders or open questions as settled canon.
 - If uncertain, open a review note in `review/` rather than editing canon directly.
-- Source documents do not automatically become canon — all canon updates
-  require reviewed PRs. See `sources/citation_policy.md`.
+- Source documents do not automatically become canon.
 
-See [`CONTRIBUTING.md`](CONTRIBUTING.md) for contribution scope and review
-requirements, [`LICENSE.md`](LICENSE.md) for licensing (CC BY 4.0 for the
-textual canon), and [`CITATION.cff`](CITATION.cff) for how to cite this work.
+See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the full distinction between
+repository corrections and substantive framework revision, contribution scope,
+and review requirements; [`LICENSE.md`](LICENSE.md) for licensing (CC BY 4.0
+for the textual canon); and [`CITATION.cff`](CITATION.cff) for how to cite this
+work.
 
 ---
 
